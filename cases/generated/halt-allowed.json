@@ -1,0 +1,116 @@
+{
+  "case_id": "halt-allowed",
+  "device_group": "grp-fleet-7",
+  "events": [],
+  "initial": {
+    "counter": 2,
+    "revoked_manifests": [],
+    "sector_budgets": {
+      "S0": 2,
+      "S1": 2
+    },
+    "slots": {
+      "A": {
+        "active": false,
+        "candidate": false,
+        "erase_count": 0,
+        "generation": 1,
+        "health": null,
+        "manifest_id": "M1",
+        "readback_verified": [
+          "p0",
+          "p1",
+          "p2",
+          "p3"
+        ],
+        "ready": true,
+        "session": null,
+        "sig_entry": {
+          "auth_id": "AUTH-1",
+          "digest_witness": "sha256:eeee5c57469dad112130ccc8bc2200d670a2fb1a844038c7a193598bc77b8176",
+          "generation": 1,
+          "manifest_id": "M1",
+          "signer": "signer-AUTH-1",
+          "version": 1
+        },
+        "trial": null,
+        "written_pages": {
+          "p0": "sha256:sha256:ce3127a8b884e29b4532121d5fb649ed361d9f4c5d291a9cb7cff28ee18928bb",
+          "p1": "sha256:sha256:8f5173280af4cfe32c237f2353dde658b2788e25a9f2ee371ca397ae388d5e1e",
+          "p2": "sha256:sha256:68295a0fda81dbc0aa4c37db0162115e36e0721e5ec5603a5a55a88f5bb79423",
+          "p3": "sha256:sha256:c24f51feccaa541e32231e74bad2af59b51a7d2782fc54e4ecdb41a37d9d6a0f"
+        }
+      },
+      "B": {
+        "active": false,
+        "candidate": false,
+        "erase_count": 0,
+        "generation": 2,
+        "health": null,
+        "manifest_id": "M2",
+        "readback_verified": [],
+        "ready": false,
+        "session": null,
+        "sig_entry": null,
+        "trial": null,
+        "written_pages": {
+          "p0": "sha256:sha256:2dd17deb3aae62d34f35fa88e0cb84286e0a75a09d25f9a24cf9da7175b557e9",
+          "p1": "sha256:sha256:9ee83b2e2bd75fb6785e2a7b708e1d78da5614e213be35bcfce97b7a7aa2d8ea"
+        }
+      }
+    }
+  },
+  "manifests": [
+    {
+      "auth_id": "AUTH-1",
+      "authorized_generation": 1,
+      "device_group": "grp-fleet-7",
+      "manifest_id": "M1",
+      "pages": {
+        "p0": "sha256:sha256:ce3127a8b884e29b4532121d5fb649ed361d9f4c5d291a9cb7cff28ee18928bb",
+        "p1": "sha256:sha256:8f5173280af4cfe32c237f2353dde658b2788e25a9f2ee371ca397ae388d5e1e",
+        "p2": "sha256:sha256:68295a0fda81dbc0aa4c37db0162115e36e0721e5ec5603a5a55a88f5bb79423",
+        "p3": "sha256:sha256:c24f51feccaa541e32231e74bad2af59b51a7d2782fc54e4ecdb41a37d9d6a0f"
+      },
+      "signer": "signer-AUTH-1",
+      "version": 1
+    },
+    {
+      "auth_id": "AUTH-2",
+      "authorized_generation": 2,
+      "device_group": "grp-fleet-7",
+      "manifest_id": "M2",
+      "pages": {
+        "p0": "sha256:sha256:2dd17deb3aae62d34f35fa88e0cb84286e0a75a09d25f9a24cf9da7175b557e9",
+        "p1": "sha256:sha256:9ee83b2e2bd75fb6785e2a7b708e1d78da5614e213be35bcfce97b7a7aa2d8ea",
+        "p2": "sha256:sha256:7952d4e47599403bff28dc256e5d8ca66c29a25bffbb10046b2eac5cb29009f0",
+        "p3": "sha256:sha256:a5d93d3810cd98c0b28d6c526688ecb95dde9204612b114dc6fb2eaac6c5b44a"
+      },
+      "signer": "signer-AUTH-2",
+      "version": 2
+    }
+  ],
+  "max_power_losses": 2,
+  "policy": {
+    "fallback": "halt_allowed"
+  },
+  "schema_version": 1,
+  "sectors": [
+    {
+      "capacity": 2,
+      "pages": [
+        "p0",
+        "p1"
+      ],
+      "sector_id": "S0"
+    },
+    {
+      "capacity": 2,
+      "pages": [
+        "p2",
+        "p3"
+      ],
+      "sector_id": "S1"
+    }
+  ]
+}
